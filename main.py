@@ -1,14 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    return "Welcome to my website"
+    return "<h1>Welcome to my website</h1>"
 
 @app.route("/contact")
-def contact():
-    return "Contact page"
+def contact_Page():
+    return render_template("contact.html")
 
 @app.route("/gallery")
 def gallery():
